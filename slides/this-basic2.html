@@ -1,0 +1,19 @@
+<h2>this...?</h2>
+
+<pre><code class="js" data-trim data-noescape>
+console.log(this) // window
+function () {
+  console.log(this) // window
+}
+var obj = {
+  f: function () {
+    console.log(this) // obj 
+  }
+}
+new Person('deok') // Person
+
+deokseong.sayName // this === deokseong
+var copy = deokseong.sayName // this === window;
+copy();
+</code></pre>
+

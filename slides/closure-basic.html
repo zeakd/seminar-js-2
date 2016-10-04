@@ -1,0 +1,16 @@
+<h2>Closure pattern</h2>
+<p>기왕 하는거 덤으로 패턴하나 더</p>
+<pre><code class="js" data-trim data-noescape>
+function makeIncrement() {
+  var total = 0;
+  return function () {
+    console.log(total++);
+  }
+}
+var increment = makeIncrement();
+</code></pre>
+<pre class='fragment'><code class="js" data-trim data-noescape>
+increment();
+increment();
+increment();
+</code></pre>

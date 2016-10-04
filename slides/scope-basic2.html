@@ -1,0 +1,24 @@
+<h2>scope</h2>
+
+<p>무엇이 무엇이 스코플까?</p>
+<pre><code data-trim data-noescape>
+var a = 1;
+function bf() {
+  var b = 2;
+  function cf() {
+    var c = 3;
+    console.log(a, b, c, d, e, f);
+  }
+  
+  for (var d=0; d < 4; d++) {
+    var e = 5;
+  }
+
+  if (e) {
+    var f = 6;
+  } 
+
+  cf();
+}
+bf();
+</code></pre>

@@ -1,0 +1,23 @@
+<h2>check this out</h2>
+
+<pre><code class='js' data-trim data-noescape>
+function b() {
+  console.log('b global');
+}
+
+function a (b) {
+  b();
+  console.log(name)
+  var b = function () {
+    console.log('b expression local')
+  }
+  b();
+  return;
+  var name = "deok";
+  function b() {
+    console.log('b declaration local');
+  }
+}
+
+a(b);
+</code></pre>

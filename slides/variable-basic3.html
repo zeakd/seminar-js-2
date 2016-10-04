@@ -1,0 +1,18 @@
+<h2>window 객체</h2>
+
+<p>전역에 선언되는것은 모두 window의 property다.</p>
+<pre><code data-trim data-noescape>
+console.log(window.a) // error
+var a;
+console.log(window.a) // undefined
+var b = 1;
+console.log(window.b) // 1
+c = 2;
+console.log(window.c) // 2
+
+function dd() {
+  d = 3;
+}
+dd();
+console.log(window.d) // 3
+</code></pre>

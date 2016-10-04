@@ -1,0 +1,19 @@
+<h2>call, apply, this</h2>
+<p>꼭 저 오브젝트에 this를 쓰고싶은데...</p>
+<pre><code class="js" data-trim data-noescape>
+function Person (name) {
+  this.name = name;
+}
+Person.prototype.sayName = function (word) {
+  console.log(word, this.name);
+}
+
+var deokseong = new Person('deokseong');
+deokseong.sayName('Hello, ');
+var copy = deokseong.sayName;
+copy.call(deokseong, 'Hello, ');
+copy.apply(deokseong, ['Hello, ']);
+// or
+var copy = deokseong.sayName.bind(deokseong);
+</code></pre>
+

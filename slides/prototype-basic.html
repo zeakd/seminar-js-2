@@ -1,0 +1,16 @@
+<h2>Constructor</h2>
+
+<pre><code class="js" data-trim data-noescape>
+function Person (name) {
+  this.name = name;
+  this.sayName = function () {
+    console.log(this.name);
+  }
+}
+
+var deokseong = new Person('deokseong');
+var juyoung = new Person('juyoung');
+</code></pre>
+<pre class='fragment'><code class="js" data-trim data-noescape>
+deokseong.sayName === juyoung.sayname; // true? false?
+</code></pre>

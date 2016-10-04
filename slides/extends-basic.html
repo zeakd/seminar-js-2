@@ -1,0 +1,22 @@
+<pre><code class="js" data-trim data-noescape>
+function Person (name) {
+  this.name = name;
+}
+Person.prototype.sayName = function (word) {
+  console.log(word, this.name);
+}
+
+function Wheel (name) {
+  Person.call(this, name);
+}
+
+Wheel.prototype = new Person();
+Wheel.prototype.work = function () {
+  console.log(this.name + ", 구른다!");
+}
+
+var kangwon = new Wheel('강원');
+kangwon.sayName("내이름은");
+kangwon.work();
+
+</code></pre>

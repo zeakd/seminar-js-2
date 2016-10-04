@@ -1,0 +1,13 @@
+<h2>Prototype</h2>
+
+<p>그런데 그냥 function이잖아? new를 빼먹으면 어떻게 될까</p>
+<pre><code class="js" data-trim data-noescape>
+function Person (name) {
+  this.name = name;
+}
+var deokseong = Person('deokseong'); // ???
+</code></pre>
+<pre class='fragment'><code class="js" data-trim data-noescape>
+window.name === 'deoksong'
+</code></pre>
+

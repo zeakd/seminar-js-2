@@ -1,0 +1,17 @@
+<h2>Prototype</h2>
+
+<p>모든 객체는 원형이 있다.</p>
+<pre><code class="js" data-trim data-noescape>
+function Person (name) {
+  this.name = name;
+}
+Person.prototype.sayName = function () {
+  console.log(this.name);
+}
+
+var deokseong = new Person('deokseong');
+var juyoung = new Person('juyoung');
+</code></pre>
+<pre><code class="js" data-trim data-noescape>
+deokseong.sayName === juyoung.sayname; // true
+</code></pre>

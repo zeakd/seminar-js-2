@@ -1,0 +1,18 @@
+<h2>this..?</h2>
+
+<pre><code class="js" data-trim data-noescape>
+function Person (name) {
+  this.name = name;
+}
+Person.prototype.sayName = function () {
+  console.log(this.name);
+}
+
+var deokseong = new Person('deokseong');
+var juyoung = new Person('juyoung');
+deokseong.sayName(); // 'deokseong'
+var copy = deokseong.sayName;
+copy(); // ?
+</code></pre>
+
+<p class='fragment'>this는 런타임에서 매칭된다.</p>
